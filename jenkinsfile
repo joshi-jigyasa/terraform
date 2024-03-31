@@ -11,6 +11,6 @@ git branch: 'main', url: 'https://github.com/joshi-jigyasa/terraform.git'
         sh 'terraform plan'
     }
      stage('choice'){
-        sh 'terraform ${action}'
+        sh 'terraform ${action} -auto-approve'
      }
 }
