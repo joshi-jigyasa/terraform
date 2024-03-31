@@ -1,0 +1,16 @@
+node {
+    
+    stage('FIRST STAGE') {
+git branch: 'main', url: 'https://github.com/joshi-jigyasa/terraform.git'
+    }   
+    
+    stage('init'){
+        sh 'terraform init'
+    }
+     stage('plan'){
+        sh 'terraform plan'
+    }
+     stage('choice'){
+        sh 'terraform ${action}'
+     }
+}
